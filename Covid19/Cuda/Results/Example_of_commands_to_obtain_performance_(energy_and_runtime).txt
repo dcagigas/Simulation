@@ -1,0 +1,14 @@
+For energy and run-time in GPU (device):
+---------------------------------------
+
+time ./covid19_NY_cuda & nvidia-smi --loop-ms=1000 --format=csv --query-gpu=power.draw >> nvidia-smi_cuda_energy_results.txt
+
+
+For energy and run-time in CPU (host):
+-------------------------------------
+
+sudo perf stat -r 10 -e power/energy-cores/,power/energy-gpu/  ./covid19_NY_cuda 2>> perf_cuda_energy_results.txt
+
+(It runs the programm ‘covid19_NY_cuda’ ten times (-r 10) and save the results in the file ‘perf_cuda_energy_results.txt’)
+
+

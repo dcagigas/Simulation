@@ -1,0 +1,33 @@
+==17366== NVPROF is profiling process 17366, command: ./covid19_NY_cuda
+==17366== Profiling application: ./covid19_NY_cuda
+==17366== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   88.22%  7.85216s         1  7.85216s  7.85216s  7.85216s  kernel_init_random(int, curandStateXORWOW[1001]*, float[1001]*, float[1001]*, float[1001]*)
+                    4.64%  412.89ms       398  1.0374ms  858.26us  1.2561ms  simulate_population_movements_step1(unsigned char[1001]*, float[1001]*, float[1001]*, float[1001]*, unsigned char[1001]*, float[1001]*, float[1001]*, float[1001]*, int[1001]*, float, unsigned char, curandStateXORWOW[1001]*, unsigned int*)
+                    2.57%  228.47ms       199  1.1481ms  68.767us  2.5831ms  calculate_infections(unsigned char[1001]*, float[1001]*, float[1001]*, float[1001]*, curandStateXORWOW[1001]*)
+                    1.74%  154.82ms       199  777.98us  21.983us  1.1090ms  calculate_self_isolation_state_transitions(unsigned char[1001]*, int*, int, curandStateXORWOW[1001]*)
+                    0.83%  73.704ms       398  185.18us  60.800us  337.40us  simulate_population_movements_step2(unsigned char[1001]*, float[1001]*, float[1001]*, float[1001]*, unsigned char[1001]*, float[1001]*, float[1001]*, float[1001]*, int[1001]*, float, unsigned char, curandStateXORWOW[1001]*)
+                    0.73%  64.545ms       199  324.35us  51.488us  922.29us  calculate_infection_transitions(unsigned char[1001]*, float[1001]*, float[1001]*, curandStateXORWOW[1001]*)
+                    0.59%  52.820ms       199  265.43us  172.73us  373.08us  calculate_rest_state_transitions(unsigned char[1001]*, unsigned char[1001][1001]*, int, float, float, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, curandStateXORWOW[1001]*)
+                    0.54%  48.478ms       597  81.201us  79.423us  106.72us  copy_matrix_probability_type(float[1001]*, float[1001]*)
+                    0.11%  10.128ms       199  50.895us  49.375us  56.095us  copy_matrix_cell_type(unsigned char[1001]*, unsigned char[1001]*)
+                    0.01%  952.89us         1  952.89us  952.89us  952.89us  init_grid_infected(unsigned char[1001]*, unsigned int, int*, curandStateXORWOW[1001]*)
+                    0.01%  600.88us       408  1.4720us  1.0550us  77.535us  [CUDA memcpy DtoH]
+                    0.01%  445.15us         1  445.15us  445.15us  445.15us  init_grid_empty_cells(unsigned char[1001]*, curandStateXORWOW[1001]*)
+                    0.00%  323.52us       400     808ns     768ns  1.1520us  [CUDA memcpy HtoD]
+                    0.00%  25.183us         1  25.183us  25.183us  25.183us  init_grid(unsigned char[1001]*)
+                    0.00%  19.263us        21     917ns     832ns  1.4400us  [CUDA memset]
+      API calls:   98.30%  8.90778s      2392  3.7240ms  23.585us  7.85217s  cudaDeviceSynchronize
+                    1.47%  133.02ms        21  6.3345ms  3.1060us  132.09ms  cudaMalloc
+                    0.14%  12.843ms      2392  5.3690us  4.4880us  659.07us  cudaLaunchKernel
+                    0.07%  6.6273ms       808  8.2020us  4.0080us  159.23us  cudaMemcpy
+                    0.01%  828.93us        20  41.446us  3.7570us  169.73us  cudaFree
+                    0.00%  219.89us        97  2.2660us     200ns  95.040us  cuDeviceGetAttribute
+                    0.00%  145.80us        21  6.9420us  3.0660us  20.559us  cudaMemset
+                    0.00%  141.75us         1  141.75us  141.75us  141.75us  cuDeviceTotalMem
+                    0.00%  52.169us         1  52.169us  52.169us  52.169us  cuDeviceGetName
+                    0.00%  2.4650us         3     821ns     231ns  1.6230us  cuDeviceGetCount
+                    0.00%  2.3050us         1  2.3050us  2.3050us  2.3050us  cuDeviceGetPCIBusId
+                    0.00%     782ns         2     391ns     301ns     481ns  cuDeviceGet
+                    0.00%     271ns         1     271ns     271ns     271ns  cuDeviceGetUuid
+

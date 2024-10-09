@@ -1,0 +1,4 @@
+sudo perf stat -r 10 -e power/energy-cores/ ./covid19_NY_OpenMP 2>> openmp_energy_results.txt
+
+(It runs the programm ‘covid19_NY_OpenMP’ ten times (-r 10) and save the results in the file ‘openmp_energy_results.txt’)
+

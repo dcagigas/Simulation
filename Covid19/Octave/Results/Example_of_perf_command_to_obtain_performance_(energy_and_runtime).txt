@@ -1,0 +1,4 @@
+sudo perf stat -r 1 -e power/energy-cores/ octave --persist NYC.m 2>> octave_GPU_energy_results.txt
+
+(It runs the Octave programm ‘NYC.m’ one time (-r 1) and save the results in the file ‘octave_GPU_energy_results.txt’)
+

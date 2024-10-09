@@ -1,0 +1,4 @@
+sudo perf stat -r 10 -e power/energy-cores/ ./covid19_NY_serial 2>> serial_energy_results.txt
+
+(It runs the programm ‘covid19_NY_serial’ ten times (-r 10) and save the results in the file ‘serial_energy_results.txt’)
+

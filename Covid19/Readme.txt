@@ -1,6 +1,6 @@
 ﻿This source code or framework is associated with the following scientific paper:
 
-Daniel Cagigas-Muñiz, Fernando Díaz-del-Río, José Luis Sevillano-Ramos, José-Luis Guisado-Lizar, "Parallelization Strategies for High-Performance and Energy-Efficient Epidemic Spread Simulations", submitted to the Simulation Modelling Practice and Theory journal in 2024.
+Daniel Cagigas-Muñiz, Fernando Diaz-del-Rio, Jose Luis Sevillano-Ramos, José-Luis Guisado-Lizar. Parallelization strategies for high-performance and energy-efficient epidemic spread simulations, Simulation Modelling Practice and Theory, Volume 140, 2025, ISSN 1569-190X, https://doi.org/10.1016/j.simpat.2024.103059.
 
 This repository contains various implementations and results of a Covid-19 epidemic spread simulation model. The model simulates the evolution of the pandemic over 199 days in New York City (USA) in 2020. The simulation model is based on cellular automata, and the original Octave code was developed in the following paper:
 
